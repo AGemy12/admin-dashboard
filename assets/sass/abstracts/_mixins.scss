@@ -1,0 +1,32 @@
+/* ########## Start :: Flex Mixins ########## */
+@mixin flex($justify, $alignment, $flex_dir: row, $gap: 0px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignment;
+  flex-direction: $flex_dir;
+  gap: $gap;
+}
+/* ########## End   :: Flex Mixins ########## */
+
+/* ########## Start :: Width Mixins ########## */
+@mixin fitWidth($left: auto, $right: auto) {
+  width: fit-content;
+  margin-left: $left;
+  margin-right: $right;
+}
+@mixin customWidthHeight($width, $height, $right: auto, $left: auto) {
+  width: $width;
+  height: $height;
+  margin-left: $left;
+  margin-right: $right;
+}
+/* ########## End  :: Width Mixins ########## */
+
+/* ########## Start :: Positions Mixins ########## */
+@mixin absolute($top: 0px, $left: 50%, $translateX: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translateX($translateX);
+}
+/* ########## End   :: Positions Mixins ########## */
